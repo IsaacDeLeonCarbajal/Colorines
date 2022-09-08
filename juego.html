@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colorines</title>
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body class="vh-100">
+    <div id="div-tablero" class="h-100 w-100" style="background-color: rgb(23, 0, 0);">
+    </div>
+
+    <dialog id="dlg-juego-terminado" class="text-center">
+        <h1>Se terminó el tiempo</h1>
+
+        <h3>Las puntuaciones son:</h3>
+        <h5 id="lbl-puntos-1"></h5>
+        <h5 id="lbl-puntos-2"></h5>
+        <br>
+        <h4>El ganador es <span id="span-ganador"></span></h4>
+        <br>
+        <div class="d-flex justify-content-around">
+            <a class="btn btn-danger" href="index.html">Salir</a>
+            <button class="btn btn-secondary" type="button" onclick="reiniciar();">Jugar de Nuevo</button>
+        </div>
+    </dialog>
+
+    <script src="src/Posicion.js"></script>
+    <script src="src/Celda.js"></script>
+    <script src="src/Tablero.js"></script>
+    <script src="src/Jugador.js"></script>
+    <script src="src/Juego.js"></script>
+
+    <script>
+        let divTablero = document.getElementById("div-tablero");
+
+        let juego = new Juego(divTablero, 25, 30);
+
+        function reiniciar() {
+            document.getElementById("dlg-juego-terminado").close();
+
+            juego.reiniciar(divTablero, 25, 30);
+        }
+    </script>
+</body>
+
+</html>

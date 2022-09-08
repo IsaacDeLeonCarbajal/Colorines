@@ -13,7 +13,7 @@ class Juego {
         divTablero.innerHTML = "";
 
         this.tablero = new Tablero(divTablero, alto, ancho);
-        this.tiempo = 60;
+        this.tiempo = 3;
 
         this.jugadores = [
             new Jugador(0, new Posicion(0, parseInt(alto / 2)), this.tablero),
