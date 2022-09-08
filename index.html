@@ -10,7 +10,7 @@
 </head>
 
 <body class="vh-100">
-    <div id="div-tablero" class="h-100 w-100" style="background-color: rgb(23, 201, 0);">
+    <div id="div-tablero" class="h-100 w-100" style="background-color: rgb(23, 0, 0);">
     </div>
 
     <dialog id="dlg-juego-terminado" class="text-center">
@@ -19,6 +19,10 @@
         <h3>Las puntuaciones son:</h3>
         <h5 id="lbl-puntos-1"></h5>
         <h5 id="lbl-puntos-2"></h5>
+        <br>
+        <h4>El ganador es <span id="span-ganador"></span></h4>
+        <br>
+        <button class="btn btn-secondary" type="button" onclick="reiniciar();">Jugar de Nuevo</button>
     </dialog>
 
     <script src="src/Posicion.js"></script>
@@ -32,7 +36,11 @@
 
         let juego = new Juego(divTablero, 25, 30);
 
-        juego.jugar();
+        function reiniciar() {
+            document.getElementById("dlg-juego-terminado").close();
+
+            juego.reiniciar(divTablero, 25, 30);
+        }
     </script>
 </body>
 

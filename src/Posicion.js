@@ -7,4 +7,8 @@ class Posicion {
         this.y = y;
     }
 
+    toString() {
+        return "Posicion(" + this.x + ", " + this.y + ")";
+    }
+
 }
