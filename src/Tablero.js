@@ -19,6 +19,7 @@ class Tablero {
                 vista.style.height = (100 / alto) + "%";
                 vista.style.top = ((100 / alto) * y) + "%";
                 vista.style.left = ((100 / ancho) * x) + "%";
+                vista.style.backgroundColor = "#2F4F4F";
                 vista.style.borderColor = "white";
                 vista.style.borderStyle = "solid";
                 vista.style.borderWidth = "2px";

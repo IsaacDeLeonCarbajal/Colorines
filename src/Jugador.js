@@ -1,6 +1,6 @@
 class Jugador {
-    static COLOR_JUGADORES = ["rgb(0, 70, 255)", "rgb(23, 180, 0)"]; //Color de la posición actual de los jugadores
-    static COLOR_ESTELAS = ["rgb(78, 148, 252)", "rgb(0, 255, 128)"]; //Color de las celdas ocupadas por los jugadores
+    static COLOR_JUGADORES = ["#00008B", "#B22222"];
+    static COLOR_ESTELAS = ["#0000FF", "#FF0000"];
 
     pos; //Posición del jugador
     movX = 0; //Dirección del movimiento en x
